@@ -188,7 +188,7 @@ xCell2Analysis <- function(mix,
   }
   
   # Rank mix gene expression matrix
-  mixRanked <- singscore::rankGenes(mix[shared_genes, ])
+  mixRanked <- singscore::rankGenes(mix[shared_genes, ], tiesMethod="average")
   
   # Score and predict
   sigsCellTypes <- unique(unlist(lapply(
